@@ -11,7 +11,7 @@ exports.handler = async (event) => {
     var params = {
       DelaySeconds: 10,
       MessageAttributes: {},
-      MessageBody: "random text",
+      MessageBody: JSON.stringify(event.body),
       QueueUrl: "https://sqs.us-east-2.amazonaws.com/089749834193/sqs-user"
     };    
     
